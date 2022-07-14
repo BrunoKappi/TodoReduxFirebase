@@ -1,0 +1,35 @@
+input {   
+    padding: 12px 20px;
+       
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  *{
+    font-family: Oswald;   
+  }
+
+  button {
+   background-color: #4CAF50; /* Green */
+   color: white;
+   border: none;
+   cursor: pointer;
+   margin-right: 5px;
+   margin-left: 5px;
+   border-radius: 4px;
+  }
+
+ 
+
+  .TarefasForm{
+    display: flex;
+  }
+
+  .Concluded{
+    background-color: #008CBA;
+  }
+
+  .All{
+    background-color: #f44336;
+  }
