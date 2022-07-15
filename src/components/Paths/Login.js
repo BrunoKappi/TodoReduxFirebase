@@ -56,6 +56,7 @@ const Login = (props) => {
                 <button className='login-with-google-btn' onClick={signInWithGoogle}>Entrar com o Google</button>
                 
                 <Link className='Link' to="/Registrar">Criar Conta</Link>
+                <Link className='Link' to="/Forget">Esqueci Minha Senha</Link>
             </form>
            
 

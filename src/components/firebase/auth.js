@@ -2,7 +2,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthState
 import { auth } from "./index";
 import store from '../store/store'
 import { setLoggedUser,clearLoggedUser } from '../store/actions/LoggedUserActions'
-import {  GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {  GoogleAuthProvider, signInWithPopup,sendPasswordResetEmail } from "firebase/auth";
 
 onAuthStateChanged(auth, (currentUser) => {
   console.log("AUTHCHANGED", currentUser ? currentUser : 'VAZIO');
@@ -22,6 +22,11 @@ onAuthStateChanged(auth, (currentUser) => {
 
 })
 
+//auth.sendPasswordResetEmail({email:'brunokappidematos2@gmail.com'})
+
+export const resetarSenha = async (email) => {
+  return sendPasswordResetEmail(auth, email)
+};
 
 export const register = async (email, senha) => {
   return createUserWithEmailAndPassword(auth, email, senha)

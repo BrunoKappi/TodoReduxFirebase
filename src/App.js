@@ -7,6 +7,7 @@ import ListaDeTarefas from './components/Paths/ListaTarefas';
 import NotFound from './components/Paths/NotFound';
 import Layout from './components/Layout';
 import Registrar from './components/Paths/Registrar'
+import Forget from './components/Paths/Forget'
 
 
 import { connect } from 'react-redux'
@@ -21,6 +22,7 @@ const App = (props) => {
     <div className="App">
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/Forget" element={ <Forget/> } />
         <Route path="/Registrar" element={<Registrar />} >
           <Route path="*" element={<RequireAuth><NotFound /></RequireAuth>} />
         </Route>
