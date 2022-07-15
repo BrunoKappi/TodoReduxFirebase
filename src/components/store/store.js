@@ -1,9 +1,11 @@
 import { combineReducers, createStore } from 'redux'
 import tarefas from './reducers/tarefas'
+import LoggedUser from './reducers/LoggedUser'
 
 const store = createStore(
     combineReducers({
-        tarefas: tarefas
+        tarefas: tarefas,
+        LoggedUser
     }),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )

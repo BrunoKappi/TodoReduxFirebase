@@ -5,8 +5,29 @@
     min-width: 250px;
 }
 
+@media (max-width: 800px) {
+
+    .Sidebar{
+        display: flex;
+        flex-basis: 250px;
+        background-color: dodgerblue;
+        display: none;
+    }
+
+}
+
+
+
+
 .Sidebar nav{
     flex: 1;
+}
+
+.Sidebar h1{
+    padding: 10px;
+    color: white;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .Sidebar ul {

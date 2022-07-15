@@ -1,17 +1,45 @@
 import './App.css';
-import Content from './components/Content';
-import Sidebar from './components/Sidebar';
-import { BrowserRouter } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Login from './components/Paths/Login';
+import Home from './components/Paths/Home';
+import ListaDeTarefas from './components/Paths/ListaTarefas';
+import NotFound from './components/Paths/NotFound';
+import Layout from './components/Layout';
+import Registrar from './components/Paths/Registrar'
 
-function App() {
+
+import { connect } from 'react-redux'
+
+const App = (props) => {
+
+  const RequireAuth = ({ children }) => {
+    return props.LoggedUser.email !== 'Vazio' ? children : <Navigate to="/" />
+  }
+
   return (
     <div className="App">
-      <BrowserRouter>       
-          <Sidebar></Sidebar>
-          <Content></Content>      
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/Registrar" element={<Registrar />} >
+          <Route path="*" element={<RequireAuth><NotFound /></RequireAuth>} />
+        </Route>
+        <Route path="/App" element={<RequireAuth><Layout /></RequireAuth>} >
+          <Route path="/App/" element={<RequireAuth><Home /></RequireAuth>} />
+          <Route path="Todo" element={<RequireAuth><ListaDeTarefas /></RequireAuth>} />
+          <Route path="*" element={<RequireAuth><NotFound /></RequireAuth>} />
+        </Route>
+      </Routes>
     </div>
   );
 }
 
-export default App;
+
+const ConnectedApp = connect((state) => {
+  return {
+    LoggedUser: state.LoggedUser
+  }
+})(App)
+
+export default ConnectedApp
+

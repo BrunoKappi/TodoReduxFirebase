@@ -1,0 +1,121 @@
+.ConteudoLista{
+  padding: 2rem;
+}
+
+.ulMenor{
+display: none;
+}
+
+.ulGrande´{
+display: block;
+}
+
+.ulGrande {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+.ulGrande li {
+  float: left;
+}
+
+.ulGrande li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.ulGrande li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #aa3604;
+  cursor: pointer;
+  
+}
+
+.Verde{
+  float: right;
+}
+
+
+.Loading{
+  margin: 40px;
+}
+
+
+
+  .Nenhumatarefa{
+    color: rgb(121, 121, 121);
+    text-decoration: solid;
+  }
+
+
+@media (max-width: 800px) {
+
+  .LinksDoInicio{
+    flex-grow: 8;
+  }
+
+  .Verde{
+    flex-grow: 2;
+  }
+
+  .ulMenor{
+    display: block;
+  }
+
+  .ulGrande´{
+    display: none;
+  }
+
+  .ulGrande li{
+    display: none;
+  }
+
+  .ulGrande li a{
+    display: none;
+  }
+
+
+  .ulMenor {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  
+  
+  .ulMenor li {
+    float: left;
+  }
+  
+  .ulMenor li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .ulMenor li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+
+
+}

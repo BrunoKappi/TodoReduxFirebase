@@ -41,16 +41,19 @@
     height: 25px;
     width: 25px;
     background-color: rgb(215, 213, 213);
+    border-radius: 5px;
   }
   
   /* On mouse-over, add a grey background color */
   .container:hover input ~ .checkmark {
     background-color: #ccc;
+    border-radius: 5px;
   }
   
   /* When the checkbox is checked, add a blue background */
   .container input:checked ~ .checkmark {
     background-color: #2196F3;
+    border-radius: 5px;
   }
   
   /* Create the checkmark/indicator (hidden when not checked) */

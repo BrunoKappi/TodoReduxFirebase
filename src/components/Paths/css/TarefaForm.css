@@ -1,29 +1,63 @@
-input {   
-    padding: 12px 20px;
-       
+.TarefaInput {   
+    padding: 12px 20px;       
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    margin-right: 5px;
   }
 
   *{
     font-family: Oswald;   
   }
 
-  button {
+  .TarefaFormButton {
    background-color: #4CAF50; /* Green */
    color: white;
    border: none;
    cursor: pointer;
    margin-right: 5px;
    margin-left: 5px;
-   border-radius: 4px;
+   border-radius: 4px;  
+   min-height: 40px;
   }
 
  
+  @media (max-width: 800px) {
+    .TarefaFormButton {
+      background-color: #4CAF50; /* Green */
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-right: 5px;
+      margin-left: 5px;
+      border-radius: 4px;
+      min-height: 40px;
+      margin-bottom: 5px;     
+      margin-left: 0px;
+      flex-grow: 1;
+     }
+
+     .TarefaInput{
+      padding: 12px 20px;       
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+     }
+
+     .TarefasForm{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      flex-grow: 1;
+    }
+  
+  }
+
 
   .TarefasForm{
     display: flex;
+    flex-wrap: wrap;
   }
 
   .Concluded{
@@ -31,5 +65,5 @@ input {
   }
 
   .All{
-    background-color: #f44336;
+    background-color: #aa3604;;
   }
