@@ -28,9 +28,9 @@ const Forget = (props) => {
         ).catch((error) => { 
             setErro("Email não encontrado")
             setTimeout(() =>{
-                setErro("")
+                setErro("") 
             },4000)            
-        })
+        }) 
        }
     }
     return (
