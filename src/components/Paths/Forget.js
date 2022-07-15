@@ -39,7 +39,7 @@ const Forget = (props) => {
             <form onSubmit={HandleSubmitSigin} className="RegisterForm">
                 <h1>Resetar Senha</h1>               
                 <input type="email" placeholder='Email' onChange={e => setEmail(e.target.value)} />               
-                <button className='SignInButton'>Criar Conta</button>                               
+                <button className='SignInButton'>Enviar Email</button>                               
                 <Link className='Link' to="/">Entrar</Link>
             </form>
             
